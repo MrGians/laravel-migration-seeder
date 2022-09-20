@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Train;
 
 class HomeController extends Controller
 {
     // Homepage view
     public function index()
     {
-        $trains = []; // TODO pick data from DB
+        // $trains = Train::all();
+        $trains = [];
         return view('home', compact($trains));
     }
 }
