@@ -14,7 +14,7 @@ class CreateTrainsTable extends Migration
     public function up()
     {
         Schema::create('trains', function (Blueprint $table) {
-
+            
             $table->id();
             $table->string('azienda', 50);
             $table->string('stazione_partenza', 100);
@@ -25,7 +25,6 @@ class CreateTrainsTable extends Migration
             $table->smallInteger('num_carrozze')->unsigned();
             $table->boolean('in_orario')->default(1);
             $table->boolean('cancellato')->default(0);
-            
         });
     }
 
